@@ -1,10 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Oreh\\Desktop\\c\u002B\u002B homeworks\\EclipseProtocol\\",
+  "WorkspaceRootPath": "C:\\Users\\Oreh\\Desktop\\c\u002B\u002B homeworks\\Eclipse-Ptorocol\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C9D790A-C9EA-4DF8-822F-58B2ED4BCCBE}|EclipseProtocol.vcxproj|C:\\Users\\Oreh\\Desktop\\c\u002B\u002B homeworks\\EclipseProtocol\\EclipseProtocol.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{1C9D790A-C9EA-4DF8-822F-58B2ED4BCCBE}|EclipseProtocol.vcxproj|solutionrelative:EclipseProtocol.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Oreh\\Desktop\\c\u002B\u002B homeworks\\EclipseProtocol\\EclipseProtocol.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,10 +20,10 @@
               "DocumentIndex": 0,
               "Title": "EclipseProtocol.cpp",
               "DocumentMoniker": "C:\\Users\\Oreh\\Desktop\\c\u002B\u002B homeworks\\EclipseProtocol\\EclipseProtocol.cpp",
-              "RelativeDocumentMoniker": "EclipseProtocol.cpp",
+              "RelativeDocumentMoniker": "..\\EclipseProtocol\\EclipseProtocol.cpp",
               "ToolTip": "C:\\Users\\Oreh\\Desktop\\c\u002B\u002B homeworks\\EclipseProtocol\\EclipseProtocol.cpp",
-              "RelativeToolTip": "EclipseProtocol.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "RelativeToolTip": "..\\EclipseProtocol\\EclipseProtocol.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-05-20T11:00:00.282Z",
               "EditorCaption": ""

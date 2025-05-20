@@ -1,0 +1,4 @@
+﻿  EclipseProtocol.cpp
+\EclipseProtocol.cpp(1,1): error C1083: Не удается открыть файл источник: EclipseProtocol.cpp: No such file or directory,
+  (компиляция исходного файла "/EclipseProtocol.cpp")
+  
