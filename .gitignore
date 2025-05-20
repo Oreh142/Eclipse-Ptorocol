@@ -1,0 +1,14 @@
+# Build directories
+/build/
+
+# Visual Studio
+*.suo
+*.user
+*.vcxproj*
+*.filters
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+*.dir
