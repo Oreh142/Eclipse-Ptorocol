@@ -1,4 +1,4 @@
-#ifndef ROOM_H
+п»ї#ifndef ROOM_H
 #define ROOM_H
 
 #include <string>
@@ -13,7 +13,7 @@
 
 struct Connection {
     Direction dir;
-    int       roomId;   // связывает по ID, сам Map/Level потом переведёт в указатель
+    int       roomId;   // СЃРІСЏР·С‹РІР°РµС‚ РїРѕ ID, СЃР°Рј Map/Level РїРѕС‚РѕРј РїРµСЂРµРІРµРґС‘С‚ РІ СѓРєР°Р·Р°С‚РµР»СЊ
     bool      open = true;
 };
 
@@ -29,10 +29,10 @@ public:
 
     const std::vector<Item*>& GetItems()   const;
     const std::vector<Enemy*>& GetEnemies() const;
-    Puzzle* GetPuzzle()  const;   // nullptr, если нет
-    const std::vector<Item*>& GetChest()   const;   // предметы в сундуке
+    Puzzle* GetPuzzle()  const;   // nullptr, РµСЃР»Рё РЅРµС‚
+    const std::vector<Item*>& GetChest()   const;   // РїСЂРµРґРјРµС‚С‹ РІ СЃСѓРЅРґСѓРєРµ
     bool IsChestLocked() const;
-    std::optional<Connection>  GetStairs() const;     // nullptr, если нет
+    std::optional<Connection>  GetStairs() const;     // nullptr, РµСЃР»Рё РЅРµС‚
     Note* GetNote() const;
     const std::vector<Connection>& GetConnections() const;
 

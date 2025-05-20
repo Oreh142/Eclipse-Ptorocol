@@ -1,4 +1,4 @@
-#ifndef PLAYER_H
+п»ї#ifndef PLAYER_H
 #define PLAYER_H
 
 #include "Character.h"
@@ -31,7 +31,7 @@ public:
         int armor,
         int speed);
 
-    // ==== Инвентарь ====
+    // ==== РРЅРІРµРЅС‚Р°СЂСЊ ====
 
     bool AddItem(Item* item);
 
@@ -51,10 +51,10 @@ public:
     bool RemoveQuestItem(QuestItem* item);
 
     void AddNote(const Note& note);      
-    void ShowNotes()              const; // выводит все записи в том порядке, как добавлены
+    void ShowNotes()              const; // РІС‹РІРѕРґРёС‚ РІСЃРµ Р·Р°РїРёСЃРё РІ С‚РѕРј РїРѕСЂСЏРґРєРµ, РєР°Рє РґРѕР±Р°РІР»РµРЅС‹
 
-    // ==== Пересчёт итоговых характеристик ====
-    // (базовые из Character + бонусы экипировки + пассивки QuestItem)
+    // ==== РџРµСЂРµСЃС‡С‘С‚ РёС‚РѕРіРѕРІС‹С… С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРє ====
+    // (Р±Р°Р·РѕРІС‹Рµ РёР· Character + Р±РѕРЅСѓСЃС‹ СЌРєРёРїРёСЂРѕРІРєРё + РїР°СЃСЃРёРІРєРё QuestItem)
     int GetStrength()    const override;
     int GetAgility()     const override;
     int GetEndurance()   const override;
@@ -62,7 +62,7 @@ public:
     int GetArmor()       const override;
     int GetSpeed()       const override;
     int GetEnergyRegenRate() const override {
-        int regen = 2;  // базово
+        int regen = 2;  // Р±Р°Р·РѕРІРѕ
 
         for (auto* eq : _equippedItems) {
             if (!eq) continue;
@@ -77,11 +77,11 @@ public:
             regen += qi->getModifiers().energyRegenMod;
         }
         return regen;
-        // после реализация будет перенесена в .cpp файл
+        // РїРѕСЃР»Рµ СЂРµР°Р»РёР·Р°С†РёСЏ Р±СѓРґРµС‚ РїРµСЂРµРЅРµСЃРµРЅР° РІ .cpp С„Р°Р№Р»
     }
     int GetResistance(DamageType type) const override;
 
-    // Доступ к спискам для UI
+    // Р”РѕСЃС‚СѓРї Рє СЃРїРёСЃРєР°Рј РґР»СЏ UI
     const std::vector<InventorySlot>& GetEquipmentInventory()     const;
     const std::vector<InventorySlot>& GetSyringeInventory()  const;
     const std::vector<InventorySlot>& GetThrowingInventory() const;
@@ -90,24 +90,24 @@ public:
     EquipmentItem* GetEquippedWeapon() const;
 
 private:
-    // Лимиты
+    // Р›РёРјРёС‚С‹
     static constexpr size_t MAX_GEAR_SLOTS = 2;
     static constexpr size_t MAX_SYRINGE_SLOTS = 10;
     static constexpr size_t MAX_THROW_SLOTS = 5;
 
-    // Контейнеры по категориям
-    std::vector<InventorySlot> gearInventory_;     // хранит EquipmentItem*
-    std::vector<InventorySlot> syringeInventory_;  // хранит ConsumableItem*
-    std::vector<InventorySlot> throwingInventory_;// хранит ThrowingWeaponItem*
-    std::vector<InventorySlot> _questInventory;    // хранит QuestItem*
+    // РљРѕРЅС‚РµР№РЅРµСЂС‹ РїРѕ РєР°С‚РµРіРѕСЂРёСЏРј
+    std::vector<InventorySlot> gearInventory_;     // С…СЂР°РЅРёС‚ EquipmentItem*
+    std::vector<InventorySlot> syringeInventory_;  // С…СЂР°РЅРёС‚ ConsumableItem*
+    std::vector<InventorySlot> throwingInventory_;// С…СЂР°РЅРёС‚ ThrowingWeaponItem*
+    std::vector<InventorySlot> _questInventory;    // С…СЂР°РЅРёС‚ QuestItem*
 
     std::vector<Note> _notes;
 
-    // Экипировка
+    // Р­РєРёРїРёСЂРѕРІРєР°
     std::array<EquipmentItem*, static_cast<size_t>(EquipSlot::Count)> _equippedItems{};
     EquipmentItem* _equippedWeapon = nullptr;
 
-    // Пересчитать stats: базовые + всё, что в equippedItems_ и в questInventory_
+    // РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ stats: Р±Р°Р·РѕРІС‹Рµ + РІСЃС‘, С‡С‚Рѕ РІ equippedItems_ Рё РІ questInventory_
     void RecalcStats();
 };
 
