@@ -50,6 +50,9 @@ public:
     bool AddQuestItem(QuestItem* item);
     bool RemoveQuestItem(QuestItem* item);
 
+    void AddNote(const Note& note);      
+    void ShowNotes()              const; // выводит все записи в том порядке, как добавлены
+
     // ==== Пересчёт итоговых характеристик ====
     // (базовые из Character + бонусы экипировки + пассивки QuestItem)
     int GetStrength()    const override;
@@ -97,6 +100,8 @@ private:
     std::vector<InventorySlot> syringeInventory_;  // хранит ConsumableItem*
     std::vector<InventorySlot> throwingInventory_;// хранит ThrowingWeaponItem*
     std::vector<InventorySlot> _questInventory;    // хранит QuestItem*
+
+    std::vector<Note> _notes;
 
     // Экипировка
     std::array<EquipmentItem*, static_cast<size_t>(EquipSlot::Count)> _equippedItems{};
